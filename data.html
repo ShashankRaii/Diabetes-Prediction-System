@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Data Records</title>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            initEvents();
+
+        });
+
+        function initEvents() {
+
+            $(".list").hover(function() {
+
+                $(".list li:first span").stop().animate({
+                    borderWidth: "5",
+                    backgroundColor: "#3f3659",
+                    color: "#e5e3e8"
+                }, {
+                    duration: 170,
+                    complete: function() {}
+                });
+
+            }, function() {
+
+                $(".list li:first span").stop().animate({
+                    borderWidth: "2",
+                    backgroundColor: "#201c2b",
+                    color: "#b8b5c0"
+                }, {
+                    duration: 170,
+                    complete: function() {}
+                });
+
+            });
+
+        }
+
+        function animateTable(e) {
+
+
+
+
+        }
+    </script>
+    <style>
+        body {
+            background-color: #fff;
+            font-family: 'Source Sans Pro', sans-serif;
+            overflow-x: hidden !important;
+            margin: 0px !important;
+            padding: 0px !important;
+        }
+        
+        * {
+            text-decoration: none !important;
+        }
+        
+        .nav {
+            position: fixed;
+            z-index: 1000;
+            top: 0;
+            right: 0;
+            left: 0;
+            height: 80px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 25px 0 25px;
+            background-color: #fff;
+            box-shadow: 0 19px 38px rgba(0, 0, 0, 0.10);
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        
+        .nav .links a {
+            margin-right: 25px;
+            font-size: 16px;
+            font-weight: 600;
+            color: #000;
+            text-decoration: none;
+        }
+        
+        .nav .links .mainlink {
+            color: #7d5bbe;
+        }
+        
+        .nav h4 {
+            font-size: 22px;
+            font-weight: bold;
+            margin-left: 25px;
+        }
+        
+        .container {
+            width: 100%;
+            height: 70%;
+            background-color: #d4d3e4;
+            padding: 100px;
+        }
+        
+        .listWrap {
+            height: 800px;
+            width: 100%;
+        }
+        
+        .list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: table;
+            white-space: nowrap;
+            width: 100%;
+        }
+        
+        .list li {
+            background-color: #f0f0f0;
+            display: table-row;
+            color: #5c5c5c;
+        }
+        
+        .list li:nth-child(odd) {
+            background-color: #f2f2f2;
+            display: table-row;
+            font-size: 9pt;
+            color: #5c5c5c;
+        }
+        
+        .list li:nth-child(odd):hover {
+            background-color: #dadada;
+        }
+        
+        .list li:nth-child(even) {
+            background-color: #e8e8e8;
+            display: table-row;
+            font-size: 9pt;
+            color: #5c5c5c;
+        }
+        
+        .list li:nth-child(even):hover {
+            background-color: #dadada;
+        }
+        
+        .list li:nth-child(1) span:first-child {
+            border-top-left-radius: 6px;
+        }
+        
+        .list li:nth-child(1) span:last-child {
+            border-top-right-radius: 6px;
+        }
+        
+        .list li:nth-child(1) {
+            background-color: #201c2b;
+            text-transform: uppercase;
+            font-size: 8pt;
+            font-weight: bold;
+            color: #b8b5c0;
+        }
+        
+        .list li:nth-child(1):hover {}
+        
+        .list li:nth-child(1) span {
+            border-bottom: 2px solid #7d5bbe;
+            padding: 14px;
+        }
+        
+        .list span {
+            text-align: left;
+            display: table-cell;
+            padding: 6px;
+            vertical-align: middle;
+        }
+        
+        .list span:nth-child(2) {}
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="nav">
+            <div class="logo">
+                <h4>DiScan</h4>
+            </div>
+            <div class="links">
+                <a href="index.html">Home</a>
+                <a href="predict.html" class="mainlink">Predict</a>
+                <a href="data.html">Data</a>
+                <a href="about.html">About</a>
+                <a href="login.html">Login</a>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <div class="listWrap">
+
+                <ul class="list">
+
+                    <li>
+                        <span>User</span>
+                        <span>Date</span>
+                        <span>Pregnancies</span>
+                        <span>Glucose</span>
+                        <span>Blood Pressure</span>
+                        <span>Skin Thickness</span>
+                        <span>Insulin</span>
+                        <span>BMI</span>
+                        <span>Diabetes Pedigree Function</span>
+                        <span>Age</span>
+                        <span>Result</span>
+                        <span></span>
+                    </li>
+
+                    <li>
+                        <span> {{ dt.user }}</span>
+                        <span> {{ dt.date_created }}</span>
+                        <span> {{ dt.Pregnancies }}</span>
+                        <span> {{ dt.Glucose }}</span>
+                        <span> {{ dt.Blood_Pressure }}</span>
+                        <span> {{ dt.Skin_Thickness }}</span>
+                        <span> {{ dt.Insulin }}</span>
+                        <span> {{ dt.BMI }}</span>
+                        <span> {{ dt.Diabetes_Pedigree_Function }}</span>
+                        <span> {{ dt.Age }}</span>
+                        <span> {{ dt.result_s }}</span>
+                        <span></span>
+                    </li>
+
+
+                </ul>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+<script src="http://code.jquery.com/color/jquery.color-2.1.2.min.js" integrity="sha256-H28SdxWrZ387Ldn0qogCzFiUDDxfPiNIyJX7BECQkDE=" crossorigin="anonymous"></script>
+
+</html>

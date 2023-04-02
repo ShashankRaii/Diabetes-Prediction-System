@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>About Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #fff;
+            font-family: 'Source Sans Pro', sans-serif;
+            overflow-x: hidden !important;
+            margin: 0px !important;
+            padding: 0px !important;
+        }
+        
+        * {
+            text-decoration: none !important;
+        }
+        
+        .nav {
+            position: fixed;
+            z-index: 1000;
+            top: 0;
+            right: 0;
+            left: 0;
+            height: 80px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 25px 0 25px;
+            background-color: #fff;
+            box-shadow: 0 19px 38px rgba(0, 0, 0, 0.10);
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        
+        .nav .links a {
+            margin-right: 25px;
+            font-size: 16px;
+            font-weight: 600;
+            color: #000;
+            text-decoration: none;
+        }
+        
+        .nav .links .mainlink {
+            color: #7d5bbe;
+        }
+        
+        .nav h4 {
+            font-size: 22px;
+            font-weight: bold;
+            margin-left: 25px;
+        }
+        
+        h1 {
+            color: #333;
+            font-size: 36px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 120px;
+        }
+        
+        p {
+            color: #666;
+            font-size: 18px;
+            line-height: 1.5;
+            margin: 20px auto;
+            max-width: 800px;
+            text-align: justify;
+        }
+        
+        .btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 18px;
+            margin-top: 30px;
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .btn:hover {
+            background-color: #0062cc;
+            transform: translateY(-2px);
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="nav">
+            <div class="logo">
+                <h4>DiScan</h4>
+            </div>
+            <div class="links">
+                <a href="index.html">Home</a>
+                <a href="predict.html" class="mainlink">Predict</a>
+                <a href="data.html">Data</a>
+                <a href="about.html">About</a>
+                <a href="login.html">Login</a>
+            </div>
+        </div>
+        <h1>About Us</h1>
+        <p>Greetings! We are a team of third-year IT engineering students who are passionate about using our skills and knowledge to make a positive impact on the world. Specifically, we have focused our efforts on developing a diabetes prediction system
+            that can help individuals identify their risk of developing diabetes and take proactive steps to prevent it. As IT engineering students, we have a strong foundation in data science, machine learning, and software development. We have used
+            these skills to create a system that is accurate, easy to use, and accessible to everyone. Our goal is to use technology to make healthcare more accessible and empower individuals to take control of their health.</p>
+        <p>We are committed to creating a system that is not only effective, but also ethical and responsible. We understand the importance of data privacy and security, and we have taken great care to ensure that our system meets the highest standards of
+            compliance. As third-year students, we are still early in our careers, but we are excited about the possibilities that lie ahead. We are constantly learning and growing, and we are eager to apply our skills to new challenges and opportunities.
+            Thank you for visiting our website, and we hope that our diabetes prediction system can help you take control of your health and live a happier, healthier life.</p>
+        <a href="#" class="btn">Contact Us</a>
+    </div>
+
+    <script>
+        const btn = document.querySelector('.btn');
+
+        btn.addEventListener('click', () => {
+            alert('Thank you for contacting us!');
+        });
+    </script>
+</body>
+
+</html>
